@@ -1,0 +1,19 @@
+DANH SÁCH TÊN FILE ẢNH CẦN CHUẨN BỊ
+---------------------------------
+Để trang web hiển thị đúng, bạn hãy copy ảnh vào thư mục này và đổi tên đúng như danh sách dưới đây:
+
+1.  hero-bg.jpg       (Ảnh bìa lớn đầu trang)
+2.  ao-bomber.jpg     (Sản phẩm 1)
+3.  vay-du-tiec.jpg    (Sản phẩm 2)
+4.  ao-thun.jpg        (Sản phẩm 3)
+5.  quan-jean.jpg      (Sản phẩm 4)
+6.  so-mi-trang.jpg    (Sản phẩm 5)
+7.  ao-len.jpg         (Sản phẩm 6)
+8.  tui-xach.jpg       (Sản phẩm 7)
+9.  vay-hoa.jpg        (Sản phẩm 8)
+10. ao-khoac-da.jpg    (Sản phẩm 9)
+11. au-phuc.jpg        (Sản phẩm 10)
+12. ao-hoodie.jpg      (Sản phẩm 11)
+13. mang-to.jpg        (Sản phẩm 12)
+
+Lưu ý: Bạn nên sử dụng định dạng .jpg hoặc .png (nếu dùng .png hãy sửa lại đuôi file trong index.html).
