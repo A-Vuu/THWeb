@@ -1,5 +1,0 @@
-﻿C:\wamp64\www\doan_THweb\BaiLab\Lab02\Lab02\Vi_du_Lab01\images\layout\checked.png
-C:\wamp64\www\doan_THweb\BaiLab\Lab03\Lab03\Vi_du\images\layout\checked.png
-C:\wamp64\www\doan_THweb\BaiLab\Lab03\Lab03\Vi_du_Lab01\images\layout\checked.png
-C:\wamp64\www\doan_THweb\BaiLab\Lab04\Lab04\Vi_du\images\layout\checked.png
-C:\wamp64\www\doan_THweb\BaiLab\Lab05\Lab05\Vi_du\images\layout\checked.png
