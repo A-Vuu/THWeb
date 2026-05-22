@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wireframe Bố Cục Website Bán Hàng</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ecf0f1;
+        padding: 30px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Tiện ích chung cho các khối để canh giữa chữ và tạo viền trắng phân tách */
+      .block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: bold;
+        border: 2px solid #fff;
+        text-align: center;
+      }
+
+      /* ==============================
+           1. TOP BAR (Thanh trên cùng)
+           ============================== */
+      .top-bar {
+        display: flex;
+        height: 45px;
+      }
+      .top-left {
+        flex: 1;
+        background-color: #95a5a6; /* Màu xám sáng */
+      }
+      .top-right {
+        flex: 1;
+        background-color: #7f8c8d; /* Màu xám đậm */
+      }
+
+      /* ==============================
+           2. HEADER (Phần logo, menu, giỏ hàng)
+           ============================== */
+      .header {
+        display: flex;
+        height: 100px;
+      }
+      .logo {
+        width: 250px;
+        background-color: #3498db; /* Màu xanh dương sáng */
+      }
+      .main-menu {
+        flex: 1;
+        background-color: #2980b9; /* Màu xanh dương đậm */
+      }
+      .cart-info {
+        width: 250px;
+        background-color: #2471a3; /* Màu xanh dương tối */
+      }
+
+      /* ==============================
+           3. MAIN BODY (Phần thân trang)
+           ============================== */
+      .main-body {
+        display: flex;
+        min-height: 500px;
+      }
+
+      /* --- CỘT TRÁI (Sidebar Danh mục) --- */
+      .sidebar {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+      }
+      .sidebar-title {
+        height: 60px;
+        background-color: #2ecc71; /* Xanh lá sáng */
+      }
+      .sidebar-menu {
+        flex: 1;
+        background-color: #27ae60; /* Xanh lá đậm */
+      }
+
+      /* --- CỘT PHẢI (Nội dung chính) --- */
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Hàng trên của cột phải (Tìm kiếm + Hotline) */
+      .search-contact-row {
+        display: flex;
+        height: 80px;
+      }
+      .search-bar {
+        flex: 1;
+        background-color: #e67e22; /* Cam sáng */
+      }
+      .contact-info {
+        width: 250px;
+        background-color: #d35400; /* Cam đậm */
+      }
+
+      /* Hàng dưới của cột phải (Banner lớn) */
+      .banner {
+        flex: 1;
+        background-color: #e74c3c; /* Đỏ */
+        font-size: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- DÒNG 1: Thanh trên cùng (Top Bar) -->
+      <div class="top-bar">
+        <div class="block top-left">Email: hello@bookstore.com</div>
+        <div class="block top-right">Mạng xã hội | Ngôn ngữ | Đăng nhập</div>
+      </div>
+
+      <!-- DÒNG 2: Phần Header -->
+      <div class="header">
+        <div class="block logo">Khu vực LOGO</div>
+        <div class="block main-menu">
+          MENU NGANG CHÍNH<br />(Trang chủ, Cửa hàng...)
+        </div>
+        <div class="block cart-info">Giỏ hàng & Giá tiền</div>
+      </div>
+
+      <!-- DÒNG 3: Phần Thân (Main Body) -->
+      <div class="main-body">
+        <!-- Cột trái: Sidebar Menu -->
+        <div class="sidebar">
+          <div class="block sidebar-title">TIÊU ĐỀ: SẢN PHẨM</div>
+          <div class="block sidebar-menu">
+            MENU DỌC<br />(Văn học, Kinh tế, Thiếu nhi...)
+          </div>
+        </div>
+
+        <!-- Cột phải: Content -->
+        <div class="content">
+          <!-- Thanh tìm kiếm và Số điện thoại -->
+          <div class="search-contact-row">
+            <div class="block search-bar">THANH TÌM KIẾM</div>
+            <div class="block contact-info">HOTLINE / SỐ ĐIỆN THOẠI</div>
+          </div>
+
+          <!-- Banner quảng cáo lớn -->
+          <div class="block banner">BANNER KHUYẾN MÃI LỚN</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

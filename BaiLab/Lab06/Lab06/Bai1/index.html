@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Active</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+      }
+
+      /* MENU */
+      .topnav {
+        overflow: hidden;
+        background: #333;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 16px 20px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      /* Hover */
+      .topnav a:hover {
+        background: #555;
+        color: white;
+      }
+
+      /* ACTIVE */
+      .topnav a.active {
+        background: #72c3fc;
+        color: #111;
+      }
+
+      /* Icon */
+      .topnav .icon {
+        display: none;
+      }
+
+      /* MOBILE */
+      @media screen and (max-width: 600px) {
+        .topnav {
+          background: #72c3fc;
+        }
+
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+
+        .topnav a.icon {
+          float: right;
+          display: block;
+          color: white;
+          background: #72c3fc;
+        }
+
+        .topnav.responsive {
+          position: relative;
+        }
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .topnav.responsive a:not(.active):not(.icon) {
+          background: #333;
+          color: white;
+        }
+
+        .topnav.responsive a:not(.active):not(.icon):hover {
+          background: #555;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="menu-item active">Home</a>
+      <a href="#news" class="menu-item">News</a>
+      <a href="#contact" class="menu-item">Contact</a>
+      <a href="#about" class="menu-item">About</a>
+
+      <!-- Nút 3 gạch -->
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776;
+      </a>
+    </div>
+
+    <script>
+      // MENU RESPONSIVE
+      function toggleMenu() {
+        var x = document.getElementById("myTopnav");
+
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+
+      // ACTIVE MENU
+      const menuItems = document.querySelectorAll(".menu-item");
+
+      menuItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          // Xóa active cũ
+          menuItems.forEach(function (menu) {
+            menu.classList.remove("active");
+          });
+
+          // Thêm active mới
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab06_Bai3 - Responsive Image & Font</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* Yêu cầu: Responsive font size mặc định của body là 16px */
+        font-size: 16px;
+      }
+
+      header {
+        background-color: #ff6b4a;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: #90ee90;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .main-content {
+        background-color: #00bfff;
+        padding: 20px;
+        font-weight: bold;
+        line-height: 1.5;
+        min-height: 400px;
+      }
+
+      .aside-1 {
+        background-color: #ffd700;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        min-height: 400px;
+      }
+
+      .aside-2 {
+        background-color: #ff69b4;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        min-height: 400px;
+      }
+
+      /* Yêu cầu: Hình ảnh thay đổi cùng tỉ lệ */
+      .responsive-img {
+        max-width: 100%; /* Đảm bảo ảnh không bị tràn khung */
+        height: auto; /* Giữ nguyên tỉ lệ ảnh */
+        margin-top: 15px;
+        display: block;
+      }
+
+      /* ====================================================
+     1. MOBILE (1 cột: < 600px) 
+     ==================================================== */
+      @media screen and (max-width: 599px) {
+        body {
+          /* Yêu cầu: Khi responsive 1 cột thì font là 20px */
+          font-size: 20px;
+        }
+
+        .main-content,
+        .aside-1,
+        .aside-2 {
+          flex: 100%;
+        }
+
+        .main-content {
+          order: 1;
+        }
+        .aside-1 {
+          order: 2;
+        }
+        .aside-2 {
+          order: 3;
+        }
+      }
+
+      /* ====================================================
+     2. TABLET (2 cột phần aside: 600px -> 1199px) 
+     ==================================================== */
+      @media screen and (min-width: 600px) and (max-width: 1199px) {
+        .main-content {
+          flex: 100%;
+          order: 1;
+        }
+        .aside-1 {
+          flex: 50%;
+          order: 2;
+        }
+        .aside-2 {
+          flex: 50%;
+          order: 3;
+        }
+      }
+
+      /* ====================================================
+     3. DESKTOP (3 cột: >= 1200px) 
+     ==================================================== */
+      @media screen and (min-width: 1200px) {
+        .aside-1 {
+          flex: 20%;
+          order: 1;
+        }
+
+        .main-content {
+          flex: 60%;
+          order: 2;
+        }
+
+        .aside-2 {
+          flex: 20%;
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+
+    <div class="container">
+      <!-- CỘT 2: MAIN CONTENT (Sẽ được Flexbox xếp vào giữa ở giao diện Desktop) -->
+      <main class="main-content">
+        <div>
+          Mô-đun Flexbox Layout (Flexible Box) (Theo khuyến nghị của W3C kể từ
+          tháng 10 năm 2017) nhằm mục đích cung cấp một cách bố trí, sắp xếp và
+          phân phối không gian hiệu quả hơn cho các item trong một container,
+          ngay cả khi kích thước của chúng không xác định hoặc động (Do đó có từ
+          'flex').
+        </div>
+
+        <!-- Yêu cầu: Chèn ảnh img_01012024.jpg -->
+        <img
+          src="../Vi_du/img/banner/banner_2.jpg"
+          alt="Phong cảnh"
+          class="responsive-img"
+        />
+      </main>
+
+      <!-- CỘT 1: ASIDE 1 -->
+      <aside class="aside-1">Aside 1</aside>
+
+      <!-- CỘT 3: ASIDE 2 -->
+      <aside class="aside-2">Aside 2</aside>
+    </div>
+
+    <footer>Footer</footer>
+  </body>
+</html>

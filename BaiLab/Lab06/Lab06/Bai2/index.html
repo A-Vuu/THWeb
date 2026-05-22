@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab06_Bai2 - Flexbox Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #ff6b4a; /* Cam/Đỏ */
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: #90ee90; /* Xanh lá nhạt */
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Thêm min-height để làm các hình chữ nhật to ra theo chiều dọc */
+      .main-content {
+        background-color: #00bfff; /* Xanh cyan */
+        padding: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.5;
+        min-height: 400px; /* Làm khối to ra */
+      }
+
+      .aside-1 {
+        background-color: #ffd700; /* Vàng */
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        min-height: 400px; /* Làm khối to ra */
+      }
+
+      .aside-2 {
+        background-color: #ff69b4; /* Hồng */
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        min-height: 400px; /* Làm khối to ra */
+      }
+
+      /* ====================================================
+     1. MOBILE (Mặc định < 600px) - Xếp dọc 1 Cột
+     ==================================================== */
+      .main-content,
+      .aside-1,
+      .aside-2 {
+        flex: 100%;
+      }
+
+      .main-content {
+        order: 1;
+      }
+      .aside-1 {
+        order: 2;
+      }
+      .aside-2 {
+        order: 3;
+      }
+
+      /* ====================================================
+     2. TABLET (min-width: 600px)
+     ==================================================== */
+      @media screen and (min-width: 600px) {
+        .main-content {
+          flex: 100%;
+          order: 1;
+        }
+        .aside-1 {
+          flex: 50%;
+          order: 2;
+        }
+        .aside-2 {
+          flex: 50%;
+          order: 3;
+        }
+      }
+
+      /* ====================================================
+     3. DESKTOP (min-width: 1200px)
+     ==================================================== */
+      @media screen and (min-width: 1200px) {
+        .aside-1 {
+          flex: 20%;
+          order: 1;
+        }
+
+        .main-content {
+          flex: 60%;
+          order: 2;
+        }
+
+        .aside-2 {
+          flex: 20%;
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+
+    <div class="container">
+      <main class="main-content">
+        Mô-đun Flexbox Layout (Flexible Box) (Theo khuyến nghị của W3C kể từ
+        tháng 10 năm 2017) nhằm mục đích cung cấp một cách bố trí, sắp xếp và
+        phân phối không gian hiệu quả hơn cho các item trong một container, ngay
+        cả khi kích thước của chúng không xác định hoặc động (Do đó có từ
+        'flex').
+      </main>
+
+      <aside class="aside-1">Aside 1</aside>
+      <aside class="aside-2">Aside 2</aside>
+    </div>
+
+    <footer>Footer</footer>
+  </body>
+</html>

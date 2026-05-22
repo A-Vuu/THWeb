@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 05 - Menu Ngang và Dọc</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+      }
+
+      /* ===============================
+           1. ĐỊNH DẠNG MENU NGANG
+           =============================== */
+      .menu-ngang {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 50px 0;
+        display: flex; /* Dàn các thẻ li nằm ngang trên 1 hàng */
+      }
+
+      .menu-ngang li {
+        background-color: #6ee5b7; /* Màu nền xanh lơ mặc định */
+        transition: all 0.2s ease;
+      }
+
+      .menu-ngang li a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #444; /* Màu chữ mặc định */
+        font-size: 16px;
+      }
+
+      /* ----- Hiệu ứng khi rê chuột (Hover) vào Menu Ngang ----- */
+      .menu-ngang li:hover {
+        background-color: #f39c12; /* Đổi màu nền vàng/cam */
+        border-radius: 5px; /* 4 góc bo cong 5px cho thẻ li */
+      }
+
+      .menu-ngang li:hover a {
+        font-weight: bold; /* Chữ đậm */
+        color: white; /* Đổi chữ thành trắng cho giống hình mẫu */
+      }
+
+      /* ===============================
+           2. ĐỊNH DẠNG MENU DỌC
+           =============================== */
+      .menu-doc {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 250px; /* Độ rộng của menu dọc */
+      }
+
+      .menu-doc li {
+        background-color: #3498db; /* Màu nền xanh dương mặc định */
+        border-bottom: 1px solid #fff; /* Tạo vạch phân cách màu trắng */
+        transition: all 0.2s ease;
+      }
+
+      .menu-doc li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #111; /* Màu chữ mặc định */
+        font-size: 16px;
+      }
+
+      /* ----- Hiệu ứng khi rê chuột (Hover) vào Menu Dọc ----- */
+      .menu-doc li:hover {
+        filter: brightness(
+          130%
+        ); /* Làm sáng màu nền xanh dương (130%) cả thẻ li */
+      }
+
+      .menu-doc li:hover a {
+        font-style: italic; /* Chữ nghiêng */
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu-ngang">
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+
+    <ul class="menu-doc">
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </body>
+</html>

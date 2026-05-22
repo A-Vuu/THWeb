@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab08 JSON</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container{
+            width: 500px;
+            margin: 50px auto;
+            border: 3px solid #333;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 3px 3px 8px gray;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info p{
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>User Information</h1>
+
+        <div class="info" id="userInfo"></div>
+    </div>
+
+    <script>
+        // Đối tượng JSON
+        const user = {
+            "name": "Nguyễn Văn A",
+            "age": 30,
+            "email": "nguyenvana@stu.edu.vn",
+            "address": "Ho Chi Minh, NY 10001"
+        };
+
+        // Hiển thị dữ liệu JSON lên HTML
+        document.getElementById("userInfo").innerHTML = `
+            <p><span class="label">Name:</span> ${user.name}</p>
+            <p><span class="label">Age:</span> ${user.age}</p>
+            <p><span class="label">Email:</span> ${user.email}</p>
+            <p><span class="label">Address:</span> ${user.address}</p>
+        `;
+    </script>
+
+</body>
+</html>
